@@ -1,6 +1,11 @@
-# PWSGDotfiles
+My personal backup dotfiles.
 
-Archlinux|Hyprland
+fell free to use it as you like.
 
-Not ready yet!
-Work in progress...
+It works on my machine, I can't guarantee that it will work on yours.
+
+I use fedora, so, the package names can (and probably will) be different on another distro.
+
+It's not ready yet, but a work in progress...
+
+I accept suggestions and any help that you may wanna give.
