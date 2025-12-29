@@ -1,0 +1,104 @@
+# ==========================================
+# CONFIGURAÇÃO ALACRITTY - GUIA COMPLETO
+# ==========================================
+
+# --- JANELA (WINDOW) ---
+[window]
+# Dimensões iniciais (colunas e linhas)
+dimensions = { columns = 80, lines = 24 }
+
+# Margens internas (Padding) - Ajuda na estética, especialmente em Tiling Window Managers como Niri
+padding = { x = 10, y = 10 }
+
+# Decorações da janela: "full" (com barra), "none" (sem barra - ideal para Tiling)
+decorations = "full"
+
+# Transparência (0.0 a 1.0).
+# Nota: No Wayland/Niri, isso depende do compositor aceitar a opacidade.
+opacity = 0.90
+
+# Título da janela
+title = "Alacritty"
+
+# Classe da janela (útil para regras de janelas no Niri/KDE)
+class = { instance = "Alacritty", general = "Alacritty" }
+
+# --- FONTE (FONT) ---
+[font]
+# Você pode usar "JetBrainsMono Nerd Font" ou similar para ícones no terminal
+normal = { family = "monospace", style = "Regular" }
+bold = { family = "monospace", style = "Bold" }
+italic = { family = "monospace", style = "Italic" }
+
+# Tamanho da fonte
+size = 11.0
+
+# --- CURSOR ---
+[cursor]
+# Estilos: "Block", "Underline", "Beam" (o tracinho vertical)
+style = { shape = "Beam", blinking = "On" }
+
+# Espessura do cursor (se for Beam ou Underline)
+thickness = 0.15
+
+# --- CORES (COLORS) ---
+# Aqui você pode definir o esquema de cores.
+# Como você usa Fedora/KDE/Niri, pode querer combinar com o DankMateria.
+#[colors.primary]
+#background = "#1a1b26"
+#foreground = "#c0caf5"
+
+#[colors.normal]
+#black   = "#000000"
+#red     = "#ff0000"
+#green   = "#008000"
+#yellow  = "#ffff00"
+#blue    = "#0000ff"
+#magenta = "#ff00ff"
+#cyan    = "#00ffff"
+#white   = "#ffffff"
+
+# --- ROLAGEM (SCROLLING) ---
+[scrolling]
+# Quantidade de linhas guardadas no histórico
+history = 10000
+
+# Quantidade de linhas que rolam por vez no mouse
+multiplier = 5
+
+# --- SELEÇÃO E CLIPBOARD ---
+[selection]
+# Copiar automaticamente para o clipboard ao selecionar com o mouse
+save_to_clipboard = true
+
+# --- TERMINAL GERAL ---
+[terminal]
+# Shell padrão (se vazio, usa o do sistema. Ex: "/usr/bin/zsh")
+shell = { program = "/bin/zsh" }
+
+# --- ATALHOS (KEYBINDINGS) ---
+# O Alacritty já vem com atalhos padrão (Ctrl+Shift+C/V),
+# mas você pode adicionar os seus aqui.
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "Plus"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control"
+action = "DecreaseFontSize"
+
+[general]
+# Importar o tema customizado
+import = ["~/.config/alacritty/dank-theme.toml"]

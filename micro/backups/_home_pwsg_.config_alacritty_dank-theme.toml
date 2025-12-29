@@ -1,0 +1,61 @@
+# ~/.config/alacritty/alacritty.toml
+
+# Configurações da Janela (Window)
+window:
+  # Opacidade: 0.0 (totalmente transparente) a 1.0 (opaco)
+  opacity: 0.95
+  # Decorações: Full (barra de título), None, Transparent (macOS)
+  decorations: "Full"
+
+# Configurações da Fonte (Font)
+font:
+  # Família de fonte (ex: JetBrains Mono, Fira Code, Cascadia Code)
+  family: "Fira Code"
+  # Estilo da fonte
+  style: "Regular"
+  # Tamanho da fonte
+  size: 12.0
+
+# Cores (Colors) - Defina seus esquemas de cores aqui
+colors:
+  primary:
+    background: '0x1E1E2E' # Exemplo de cor de fundo
+    foreground: '0xCDD3F2' # Exemplo de cor de texto
+
+# Atalhos de Teclado (Key Bindings) - Personalize ações
+key_bindings:
+  - { key: Paste, chars: "\v", mode: ~ } # Ctrl+V para colar
+  - { key: Copy, chars: "\x03", mode: ~ } # Ctrl+C para copiar
+
+
+[colors.primary]
+background = '#101418'
+foreground = '#e0e2e8'
+
+[colors.selection]
+text = '#e0e2e8'
+background = '#0d47a1'
+
+[colors.cursor]
+text = '#101418'
+cursor = '#42a5f5'
+
+[colors.normal]
+black   = '#101418'
+red     = '#e64c49'
+green   = '#72d66e'
+yellow  = '#dbd07b'
+blue    = '#4186c9'
+magenta = '#4c87b7'
+cyan    = '#42a5f5'
+white   = '#abb2bf'
+
+[colors.bright]
+black   = '#5c6370'
+red     = '#e05f61'
+green   = '#89e086'
+yellow  = '#e8de97'
+blue    = '#9ad9ff'
+magenta = '#3a829e'
+cyan    = '#5a7aab'
+white   = '#ffffff'
