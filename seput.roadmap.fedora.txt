@@ -1,0 +1,59 @@
+# --- FEDORA SETUP ---
+
+
+
+# install bash bulk
+	$ dnf install bash-color-prompt bash-completion bashmount -y
+
+# install rustup and cargo
+	$ sudo dnf install rustup cargo -y
+
+
+# Install Sheldon
+	$ cargo install sheldon --locked
+
+$ cargo install clock-rs
+
+mkdir -p ~/.config/sheldon && $EDITOR ~/.config/sheldon/plugins.toml
+
+sudo dnf install p7zip p7zip-plugins xz zstd lzip unrar binutils cpio rpm2cpio p7zip-plugins
+
+
+# install standalone niri
+	$ sudo dnf copr enable yalter/niri
+	$ sudo dnf install niri waybar fuzzel alacritty -y
+
+# install niri + dms
+	$ sudo dnf copr enable avengemedia/dms -y
+	$ sudo dnf install niri dms -y
+	$ systemctl --user add-wants niri.service dms
+	
+# install dms greeter
+	$ sudo dnf copr enable avengemedia/danklinux
+	$ sudo dnf install dms-greeter -y
+	$ dms greeter enable
+	$ dms greeter sync
+	$ dms greeter status
+
+
+# install mangowc
+	$ sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release -y
+	$ sudo dnf install mangowc -y
+
+# install sway
+	$ sudo dnf install SwayNotificationCenter-bash-completion SwayNotificationCenter-fish-completion SwayNotificationCenter-zsh-completion sway-systemd swaylock-effects swaybg swayidle swayimg waybar -y
+
+# install vscodium
+	$ sudo tee -a /etc/yum.repos.d/vscodium.repo << 'EOF'
+	[gitlab.com_paulcarroty_vscodium_repo]
+	name=gitlab.com_paulcarroty_vscodium_repo
+	baseurl=https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/
+	enabled=1
+	gpgcheck=1
+	repo_gpgcheck=1
+	gpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
+	metadata_expire=1h
+	EOF
+	$ sudo dnf install codium -y
+
+#

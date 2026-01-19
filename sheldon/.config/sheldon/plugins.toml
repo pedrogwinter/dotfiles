@@ -1,0 +1,47 @@
+shell = "zsh"
+
+# --- TEMA ---
+[plugins.powerlevel10k]
+github = "romkatv/powerlevel10k"
+
+#[plugins.pure]
+#github = "sindresorhus/pure"
+#use = ["pure.zsh"]
+
+# --- UTILITÁRIOS DE NAVEGAÇÃO ---
+[plugins.z]
+github = "agkozak/zsh-z" # O "z" original para saltar entre pastas
+
+[plugins.dirhistory]
+github = "Tarrasch/zsh-autoenv" # Alternativa leve para histórico de diretórios
+apply = ["source"]
+
+# --- SUGESTÕES E HIGHLIGHT (O coração do Power Side) ---
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["source"] 
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+
+[plugins.zsh-history-substring-search]
+github = "zsh-users/zsh-history-substring-search"
+
+# Para ter os aliases de git que o Oh My Zsh tinha, mas de forma leve
+[plugins.ohmyzsh-lib]
+github = "ohmyzsh/ohmyzsh"
+dir = "lib"
+use = ["completion.zsh", "key-bindings.zsh"]
+
+[plugins.ohmyzsh-git-plugin]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/git"
+
+# --- CORES E VISUAL ---
+[plugins.colored-man-pages]
+github = "ael-code/zsh-colored-man-pages"
+

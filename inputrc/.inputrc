@@ -1,0 +1,13 @@
+# ~/.inputrc
+set editing-mode emacs
+
+# Mapeamento para Ctrl+Setas (Consistência com seu Zsh)
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[3;5~": kill-word
+"\e[H": beginning-of-line
+"\e[F": end-of-line
+
+# Melhora o autocompletar
+set show-all-if-ambiguous on
+set completion-ignore-case on

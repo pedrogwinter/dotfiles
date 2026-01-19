@@ -1,0 +1,42 @@
+# Use símbolos similares ao P10k
+format = """
+[░▒▓](#9A348E)\
+[  ](bg:#9A348E fg:#090909)\
+[](fg:#9A348E bg:#DA627D)\
+$directory\
+[](fg:#DA627D bg:#FCA17D)\
+$git_branch\
+$git_status\
+[](fg:#FCA17D bg:#86BBD8)\
+$c$golang$nodejs$python$rust\
+[](fg:#86BBD8 bg:#06969A)\
+$docker_context\
+[](fg:#06969A bg:#33658A)\
+$time\
+[ ](fg:#33658A)\
+\n$character"""
+
+[directory]
+style = "bg:#DA627D fg:#090909"
+format = "[ $path ]($style)"
+truncation_length = 3
+
+[git_branch]
+symbol = ""
+style = "bg:#FCA17D fg:#090909"
+format = "[[ $symbol $branch ]($style)]($style)"
+
+[python]
+symbol = ""
+style = "bg:#86BBD8 fg:#090909"
+format = "[[ $symbol ($version) ]($style)]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#33658A fg:#090909"
+format = "[[  $time ]($style)]($style)"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
