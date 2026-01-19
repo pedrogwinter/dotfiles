@@ -10,7 +10,7 @@ fi
 
 # --- 2. Carregar Módulos (POSIX Source) ---
 for file in path env functions aliases; do
-    source ~/.config/pdots/$file.sh
+    source ~/.config/dotfiles/$file.sh
 done
 
 # --- 3. INICIALIZAR COMPLETIONS (Resolve o erro do compdef) ---
@@ -41,7 +41,7 @@ setopt auto_name_dirs     	# Trata nomes de variáveis como caminhos
 function dotsync() {
     local msg="${1:-update dotfiles}"
     # Caminho atualizado para dentro de .config
-    cd ~/.config/pdots
+    cd ~/.config/dotfiles
     git add .
     git commit -m "$msg"
     git push origin main
