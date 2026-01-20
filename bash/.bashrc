@@ -1,6 +1,6 @@
 # --- 1. CARREGAR MÓDULOS PDOTS ---
 for file in path env functions aliases; do
-    [ -f ~/.config/pdots/$file.sh ] && . ~/.config/pdots/$file.sh
+    [ -f ~/.config/dotfiles/shell_common/$file.sh ] && . ~/.config/dotfiles/shell_common/$file.sh
 done
 
 # --- 2. CONFIGURAÇÕES DE HISTÓRICO ---

@@ -11,7 +11,7 @@ dimensions = { columns = 80, lines = 24 }
 padding = { x = 10, y = 10 }
 
 # Decorações da janela: "full" (com barra), "none" (sem barra - ideal para Tiling)
-decorations = "full"
+decorations = "none"
 
 # Transparência (0.0 a 1.0).
 # Nota: No Wayland/Niri, isso depende do compositor aceitar a opacidade.
@@ -99,6 +99,6 @@ key = "Minus"
 mods = "Control"
 action = "DecreaseFontSize"
 
-[general]
+#[general]
 # Importar o tema customizado
-import = ["~/.config/alacritty/dank-theme.toml"]
+#import = ["~/.config/alacritty/dank-theme.toml"]

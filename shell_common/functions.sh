@@ -4,7 +4,7 @@
 function dotsync() {
     local msg="${1:-update dotfiles}"
     # Caminho atualizado para dentro de .config
-    cd ~/.config/pdots
+    cd ~/.config/dotfiles
     git add .
     git commit -m "$msg"
     git push origin main

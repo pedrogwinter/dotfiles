@@ -10,7 +10,7 @@ fi
 
 # --- 2. Carregar Módulos (POSIX Source) ---
 for file in path env functions aliases; do
-    source ~/.config/dotfiles/$file.sh
+    source ~/.config/dotfiles/shell_common/$file.sh
 done
 
 # --- 3. INICIALIZAR COMPLETIONS (Resolve o erro do compdef) ---

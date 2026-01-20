@@ -3,7 +3,7 @@
 # =======================================================
 
 # --- 1. AMBIENTE E PATH ---
-set -gx PATH "$HOME/.local/bin" "$HOME/.cargo/bin" "/usr/local/bin" $PATH
+set -gx PATH "$HOME/.local/bin" "$HOME/.cargo/bin" /usr/local/bin $PATH
 set -gx EDITOR micro
 set -gx VISUAL micro
 
@@ -65,7 +65,7 @@ end
 # Sync Dotfiles
 function dotsync
     set -l msg (if test -n "$argv[1]"; echo "$argv[1]"; else; echo "update dotfiles"; end)
-    cd ~/.config/pdots
+    cd ~/.config/dotfiles
     git add .
     git commit -m "$msg"
     git push origin main
@@ -117,7 +117,7 @@ end
 if status is-interactive
     # Bindings
     bind \e\e sudo_last_command
-    
+
     # Prompt (Requer 'sudo dnf install starship')
     if type -q starship
         starship init fish | source
