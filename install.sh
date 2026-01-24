@@ -74,7 +74,7 @@ sudo dnf install git gh stow curl wget unzip p7zip p7zip-plugins xz zstd lzip un
 # ------------------------------------------------------------------------------
 # 5. Clonagem e Stow dos Dotfiles
 # ------------------------------------------------------------------------------
-DOTFILES_DIR="$HOME/dotfiles"
+DOTFILES_DIR="$HOME/.config/dotfiles"
 
 if [ -d "$DOTFILES_DIR" ]; then
     log "Dotfiles já existem. Atualizando..."
@@ -121,7 +121,7 @@ log "Instalando Pacotes do Ambiente Gráfico e Utils..."
 sudo dnf install fish zsh zsh-autocomplete zsh-syntax-highlighting bash-color-prompt bash-completion bashmount starship -y
 
 # Rust e Ferramentas Rust
-sudo dnf install rustup cargo -y
+sudo dnf install rustup cargo openssl-devel -y
 # Instalação do Sheldon via Cargo (mais seguro que dnf se não houver pacote oficial atualizado)
 if ! command -v sheldon &> /dev/null; then
     log "Instalando Sheldon via Cargo..."

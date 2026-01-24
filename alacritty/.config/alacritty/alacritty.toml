@@ -26,12 +26,12 @@ class = { instance = "Alacritty", general = "Alacritty" }
 # --- FONTE (FONT) ---
 [font]
 # Você pode usar "JetBrainsMono Nerd Font" ou similar para ícones no terminal
-normal = { family = "monospace", style = "Regular" }
-bold = { family = "monospace", style = "Bold" }
-italic = { family = "monospace", style = "Italic" }
+normal = { family = "Source Code Pro", style = "Regular" }
+bold = { family = "Source Code Pro", style = "Bold" }
+italic = { family = "Source Code Pro", style = "Italic" }
 
 # Tamanho da fonte
-size = 11.0
+size = 12.0
 
 # --- CURSOR ---
 [cursor]

@@ -1,3 +1,6 @@
 openssl-devel
 pkgconf-pkg-config
 cargo
+rustup
+stow
+fzf

@@ -29,9 +29,9 @@ sudo-command-line() {
 }
 bind -x '"\e\e": sudo-command-line'     # Mapeia Esc Esc para Sudo 
 
-if [[ -n "$(command -v starship)" ]]; then
-  eval "$(starship init bash)"
-fi
+#if [[ -n "$(command -v starship)" ]]; then
+#  eval "$(starship init bash)"
+#fi
 
 # Ativa cores no ls e completion do Fedora
 if [ -f /etc/profile.d/bash_completion.sh ]; then
@@ -47,4 +47,8 @@ parse_git_branch() {
 # Configuração do PS1
 # \w = diretório atual completo
 # \W = apenas a pasta atual
-export PS1="\[\e[32m\]\w\[\e[93m\]\$(parse_git_branch)\[\e[0m\] > "
+export PS1="\[\e[32m\]\w\[\e[93m\]\$(parse_git_branch)\[\e[0m\]
+❯ "
+
+
+
